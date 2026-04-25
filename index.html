@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Portfolio Hero</title>
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body{
+  background:#f4f8ff;
+  color:#0f172a;
+}
+
+/* NAVBAR */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 80px;
+  background:#fff;
+  position:sticky;
+  top:0;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight:bold;
+}
+.logo span{
+  color:#2563eb;
+  font-size:22px;
+}
+nav ul{
+  display:flex;
+  gap:30px;
+  list-style:none;
+}
+nav ul li a{
+  text-decoration:none;
+  color:#0f172a;
+  font-size:14px;
+  font-weight:600;
+}
+nav ul li a:hover{
+  color:#2563eb;
+}
+.hire-btn{
+  padding:10px 18px;
+  border:2px solid #2563eb;
+  border-radius:6px;
+  color:#2563eb;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:600;
+}
+
+/* HERO */
+.hero{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:80px;
+}
+.hero-text{
+  max-width:50%;
+}
+.hero-text .small{
+  color:#475569;
+  margin-bottom:10px;
+}
+.hero-text h1{
+  font-size:60px;
+  line-height:1.2;
+  margin-bottom:10px;
+  font-weight: 700;
+}
+.hero-text h1 span{
+  color:#2563eb;
+}
+.hero-text p{
+  color:#64748b;
+  font-size:18px;
+  margin:20px 0;
+  line-height:1.6;
+  font-weight: 500;
+}
+.btn{
+  display:inline-block;
+  padding:14px 28px;
+  background:#2563eb;
+  color:#fff;
+  border-radius:25px;
+  text-decoration:none;
+  font-size:16px;
+  font-weight:600;
+}
+
+/* IMAGE SIDE */
+.hero-img{
+  position:relative;
+  width:40%;
+  display:flex;
+  justify-content:center;
+}
+.hero-img img{
+  width:500px;
+  border-radius:20px;
+  position:relative;
+  z-index:2;
+}
+.circle-bg{
+  position:absolute;
+  width:380px;
+  height:380px;
+  background:radial-gradient(circle,#2563eb33 0%, transparent 70%);
+  border-radius:50%;
+  z-index:1;
+}
+
+@media(max-width:900px){
+  header{padding:20px;}
+  .hero{flex-direction:column; text-align:center;}
+  .hero-text{max-width:100%;}
+  .hero-img{margin-top:40px;}
+}
+.wordpress-services {
+    padding: 60px 20px;
+    text-align: center;
+background-color: white;
+}
+
+/* HEADER */
+.wordpress-services__subtitle {
+    color: #3b82f6;
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+
+.wordpress-services__title {
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+.wordpress-services__line {
+    width: 40px;
+    height: 3px;
+    background: #3b82f6;
+    margin: 10px auto 40px;
+}
+
+/* GRID */
+.wordpress-services__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* CARD */
+.wordpress-services__card {
+    background: #fff;
+    padding: 30px 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: 0.3s;
+   border-color: 1px black;
+}
+
+.wordpress-services__card:hover {
+    transform: translateY(-5px);
+}
+
+/* ICON */
+.wordpress-services__icon {
+    font-size: 40px;
+    color: #3b82f6;
+    margin-bottom: 15px;
+}
+
+/* TEXT */
+.wordpress-services__card-title {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.wordpress-services__text {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* SECTION */
+.portfolio {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* HEADER */
+.portfolio__subtitle {
+    color: #3b82f6;
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+
+.portfolio__title {
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+.portfolio__line {
+    width: 40px;
+    height: 3px;
+    background: #3b82f6;
+    margin: 10px auto 40px;
+}
+
+/* GRID */
+.portfolio__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* ITEMS */
+.portfolio__item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.portfolio__item img {
+    width: 100%;
+    display: block;
+    border-radius: 6px;
+}
+
+/* OVERLAY STYLE */
+.portfolio__item--overlay .portfolio__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 15px;
+    text-align: left;
+}
+
+.portfolio__overlay-title {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* PLUS BUTTON */
+.portfolio__plus {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 60px;
+    height: 60px;
+    background: #3b82f6;
+    color: #fff;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 6px;
+    cursor: pointer;
+}
+.footer {
+    background: #1e3a5f;
+    height: 60px;
+    display: flex;
+    justify-content: center; /* horizontal */
+    align-items: center;     /* vertical */
+    color: #fff;
+    font-size: 14px;
+}
+.portfolio__item img {
+    transition: transform 0.4s ease;
+}
+
+.portfolio__item:hover img {
+    transform: scale(1.1);
+}
+
+/* OVERLAY SLIDE UP */
+.portfolio__overlay {
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+}
+
+.portfolio__item:hover .portfolio__overlay {
+    transform: translateY(0);
+}
+
+/* PLUS BUTTON ANIMATION */
+.portfolio__plus {
+    transition: all 0.3s ease;
+}
+
+.portfolio__item:hover .portfolio__plus {
+    background: #1d4ed8;
+    transform: rotate(90deg);
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <span>AK</span> Ahmer Khan
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="#home">HOME</a></li>
+      <li><a href="#services">SERVICES</a></li>
+      <li><a href="#portfolio">PORTFOLIO</a></li>
+    </ul>
+  </nav>
+
+  <a href="#" class="hire-btn">HIRE ME</a>
+</header>
+
+<section class="hero" id="portfolio">
+  <div class="hero-text">
+    <div class="small">Hey,</div>
+    <h1>I'm a WordPress Developer. <br><span>Turning Ideas into Online Reality</span></h1>
+    <p> As WordPress Developer, I specialize in crafting interactive and innovative web applications. Let's transform your digital dreams into reality.</p>
+    <a href="#" class="btn">Hire Me</a>
+  </div>
+
+  <div class="hero-img">
+    <div class="circle-bg"></div>
+    <img src="../Ahmer P/assests/images/6fd1972d-eb01-4367-ac29-03614b7243e0_removalai_preview.webp" alt="profile" />
+  </div>
+</section>
+<section class="wordpress-services">
+    
+    <div class="wordpress-services__header">
+        <span class="wordpress-services__subtitle">WHAT I DO</span>
+        <h2 class="wordpress-services__title">WordPress Services</h2>
+        <div class="wordpress-services__line"></div>
+    </div>
+
+    <div class="wordpress-services__grid">
+
+        <div class="wordpress-services__card">
+            <div class="wordpress-services__icon">⚙️</div>
+            <h3 class="wordpress-services__card-title">Full Website Creation</h3>
+            <p class="wordpress-services__text">
+                My long career helped me set up successful websites for many website owners.
+                I can do the same for you by ensuring clarity, quality, and continuous delivery.
+            </p>
+        </div>
+
+        <div class="wordpress-services__card">
+            <div class="wordpress-services__icon">⚙️</div>
+            <h3 class="wordpress-services__card-title">Customization</h3>
+            <p class="wordpress-services__text">
+                Making small edits and interface tweaks to your website goes a long way when it
+                comes to increasing your online business in terms of popularity and money.
+            </p>
+        </div>
+
+        <div class="wordpress-services__card">
+            <div class="wordpress-services__icon">📊</div>
+            <h3 class="wordpress-services__card-title">Landing Pages</h3>
+            <p class="wordpress-services__text">
+                If there is one thing that I would perfectly do in this world, that is creating
+                landing pages. Either converting Figma design to WordPress or any sample.
+            </p>
+        </div>
+
+        <div class="wordpress-services__card">
+            <div class="wordpress-services__icon">🔁</div>
+            <h3 class="wordpress-services__card-title">Backup, Cloning & Migration</h3>
+            <p class="wordpress-services__text">
+                You want to move your website from one hosting to another, clone your website,
+                or need backup services—I provide all those services.
+            </p>
+        </div>
+
+        <div class="wordpress-services__card">
+            <div class="wordpress-services__icon">🐞</div>
+            <h3 class="wordpress-services__card-title">Bug Fixes</h3>
+            <p class="wordpress-services__text">
+                WordPress critical errors can cause a lot of business damage. A simple design
+                issue in the layout can be a reason for losing customers.
+            </p>
+        </div>
+
+        <div class="wordpress-services__card">
+            <div class="wordpress-services__icon">🔒</div>
+            <h3 class="wordpress-services__card-title">Security & Performance</h3>
+            <p class="wordpress-services__text">
+                A secure & fast-loading website is critical for a good customer experience.
+                I can help your website pass Core Web Vitals and make it secure.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+<section class="portfolio">
+
+    <div class="portfolio__header">
+        <span class="portfolio__subtitle">CHECK OUT</span>
+        <h2 class="portfolio__title">MY PORTFOLIO</h2>
+        <div class="portfolio__line"></div>
+    </div>
+
+    <div class="portfolio__grid">
+
+        <div class="portfolio__item">
+            <a href="https://asfkarate.com/"><img src="./assests/images/Screenshot 2026-04-25 173529.webp" alt="Project 1"></a>
+        </div>
+
+        <div class="portfolio__item">
+ <a href="https://www.threatfence.net/"><img src="./assests/images/Screenshot 2026-04-25 174015.webp" alt="Project 2"></a>        </div>
+    <div class="portfolio__item">
+ <a href="https://eesqld.com/"><img src="./assests/images/Screenshot 2026-04-25 175830.webp" alt="Project 3"></a>        </div>
+
+    </div>
+
+</section>
+<footer class="footer">
+    <p>Copyright © 2026 Muhammad Ahmer Khan All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
